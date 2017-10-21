@@ -1,12 +1,12 @@
 'use strict';
 
 
-var GDS3710 = require('@troykelly/gds3710');
+var GDS3710 = require('../');
 
 var options = {
   username: "admin",
-  password: "admin",
-  server: "https://192.168.86.3",
+  password: "p00ntang",
+  server: "https://10.7.3.121",
   insecure: true
 }
 
