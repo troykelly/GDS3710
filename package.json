@@ -1,6 +1,6 @@
 {
   "name": "@troykelly/gds3710",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "For connecting to the GDS3710",
   "main": "index.js",
   "scripts": {
