@@ -63,8 +63,7 @@ module.exports = function(options) {
 
     var requestOptions = {
       url: url,
-      jar: cookieJar,
-      form: data
+      jar: cookieJar
     }
 
     if(binary && binary == true) requestOptions.encoding = 'binary';
