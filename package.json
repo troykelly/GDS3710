@@ -1,6 +1,6 @@
 {
   "name": "GDS3710_Interface",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "For connecting to the GDS3710",
   "main": "index.js",
   "scripts": {
