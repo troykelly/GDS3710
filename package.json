@@ -1,0 +1,28 @@
+{
+  "name": "GDS3710_Interface",
+  "version": "0.0.1",
+  "description": "For connecting to the GDS3710",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/troykelly/GDS3710.git"
+  },
+  "keywords": [],
+  "author": "Troy Kelly",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/troykelly/GDS3710/issues"
+  },
+  "homepage": "https://github.com/troykelly/GDS3710#readme",
+  "dependencies": {
+    "crypto": "^1.0.1",
+    "request": "^2.83.0",
+    "xml2js": "^0.4.19"
+  },
+  "devDependencies": {
+    "request-debug": "^0.2.0"
+  }
+}
