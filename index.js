@@ -20,7 +20,8 @@ module.exports = function(options) {
     },
     snapshot: {
       path: "/snapshot/view0.jpg",
-      typeID: 1
+      typeID: 1,
+      binary: true
     },
     config: {
       path: "/goform/config",
@@ -56,7 +57,7 @@ module.exports = function(options) {
     request.post(requestOptions, cb);
   }
 
-  this.get = function(override, endpoint, data, cb) {
+  this.get = function(override, endpoint, binary, cb) {
     options = mergeOverride(override);
     var url = options.server + endpoint;
 
@@ -65,6 +66,8 @@ module.exports = function(options) {
       jar: cookieJar,
       form: data
     }
+
+    if(binary && binary == true) requestOptions.encoding = 'binary';
 
     if (options.insecure && options.insecure == true){
       requestOptions.rejectUnauthorized = false;
@@ -130,7 +133,7 @@ module.exports = function(options) {
   this.getSnapshot = function(override, cb){
     _self.login(override, endpoints.snapshot.typeID, function(error, sessionData){
       if(error) throw error;
-      _self.get(override, endpoints.snapshot.path, null, function(error, response, body){
+      _self.get(override, endpoints.snapshot.path, true, function(error, response, body){
         if(cb !== undefined) return cb(undefined, body);
         return(body);
       });
